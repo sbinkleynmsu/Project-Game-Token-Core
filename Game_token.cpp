@@ -95,18 +95,18 @@ void Token::move_special(vector<direction> vecMove){
     // return;
 }
 
-void Token::apply_terrain_effect(Space::terrain_type terrain){
+void Token::apply_terrain_effect(Space::terrain_type terr){
     // empty
-    if (terrain == 0){
+    if (terr == 0){
         return;
     }
     // water
-    if (terrain == 2){
+    if (terr == 2){
         hp -= 1;
         pp -= 1;
     }
     // lava
-    if (terrain == 3){
+    if (terr == 3){
         hp = 0;
         pp = 0;
     }
